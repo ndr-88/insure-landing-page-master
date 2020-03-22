@@ -1,0 +1,16 @@
+$breakpoints: (
+  'large':  1440px
+) !default;
+
+@mixin min-width($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-has-key($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "No value is found from `#{$breakpoint}`. "
+        +"the available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}

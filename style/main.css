@@ -1,3 +1,6 @@
+html, body {
+  height: 100%; }
+
 header {
   height: 80px;
   display: flex;
@@ -22,30 +25,152 @@ header {
       header nav {
         display: block; } }
 
-.ctaContainer {
+h1 {
+  position: relative;
+  z-index: 2;
+  font-family: "DM Serif Display", serif;
+  color: #fafafa;
+  font-size: 47px;
+  letter-spacing: -1.5px; }
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: 28px;
+  letter-spacing: -1px;
+  margin: 35px 0 5px; }
+
+p {
+  font-family: "Karla", sans-serif;
+  color: #fafafa;
+  padding: 0 24px;
+  line-height: 25px;
+  margin-bottom: 24px; }
+
+button {
+  text-decoration: none;
   background-color: #2d2640;
-  background-image: url("./images/bg-pattern-intro-left-mobile.svg");
+  border: 1px solid #fafafa;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fafafa; }
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   min-height: 952px;
+  background-color: #2d2640; }
+  .ctaContainer .copyContainer {
+    flex-grow: 1;
+    position: relative; }
+    .ctaContainer .copyContainer h1 {
+      padding: 89px 22px 0;
+      line-height: 50px;
+      margin: 0; }
+    .ctaContainer .copyContainer p {
+      margin-bottom: 37px; }
+    .ctaContainer .copyContainer button {
+      padding: 10px 28px; }
+  .ctaContainer .leftBgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 44%; }
+  .ctaContainer .rightBgImg {
+    position: absolute;
+    bottom: -181px;
+    right: -2px;
+    z-index: 1;
+    width: 34%; }
+  .ctaContainer img {
+    width: 100%;
+    height: auto; }
+
+.presentationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 79px;
+  background-color: white;
+  position: relative;
+  z-index: 999; }
+  .presentationContainer .line {
+    width: 40%;
+    margin: 139px auto 0;
+    height: 5px;
+    border-top: 1px solid #95a9c6; }
+  .presentationContainer h1 {
+    color: #2b272f; }
+  .presentationContainer p {
+    color: #837d87;
+    margin-bottom: 59px; }
+  .presentationContainer .logoPresentation {
+    width: 22.7%;
+    height: auto;
+    margin: 0 auto; }
+    .presentationContainer .logoPresentation:first-of-type {
+      margin: 46px auto 0; }
+
+.howWeWorkContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #2d2640;
+  margin: 0 23px 141px;
+  position: relative;
+  z-index: 1; }
+  .howWeWorkContainer h1 {
+    font-size: 40px;
+    line-height: 43px;
+    padding: 40px 0 10px; }
+  .howWeWorkContainer button {
+    padding: 10px 24px;
+    margin: 0 auto 73px; }
+  .howWeWorkContainer .rightBgImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54%; }
+
+footer {
+  background-color: #fafafa;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   text-align: center; }
-  .ctaContainer h1 {
-    font-family: "DM Serif Display", serif;
-    color: #fafafa;
-    font-size: 47px;
-    letter-spacing: -1.5px;
-    padding: 54px 22px 0;
-    line-height: 50px;
-    margin: 34px 0 0 0; }
-  .ctaContainer p {
-    font-family: "Karla", sans-serif;
-    color: #fafafa;
-    padding: 0 24px;
-    line-height: 25px;
-    margin-bottom: 24px; }
-  .ctaContainer button {
-    text-decoration: none;
-    background-color: #2d2640;
-    border: 1px solid #fafafa;
+  footer .logoContainer {
+    margin: 87px 0 28px; }
+  footer .socialContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer .socialContainer .socialLink {
+      position: relative; }
+    footer .socialContainer .socialImg {
+      margin: 0 8px; }
+  footer .lineFooter {
+    width: 87%;
+    margin: 36px auto 11px;
+    height: 5px;
+    border-top: 1px solid #95a9c6; }
+  footer h4 {
     text-transform: uppercase;
     font-family: "Karla", sans-serif;
-    padding: 10px 28px;
-    color: #fafafa; }
+    font-weight: 400;
+    color: #837d87; }
+  footer ul {
+    padding: 0;
+    margin: 11px 0;
+    line-height: 29px; }
+    footer ul li {
+      list-style: none;
+      text-transform: uppercase;
+      font-family: "Karla", sans-serif; }
+  footer .footerBgImg {
+    position: absolute;
+    top: 0;
+    left: 0; }

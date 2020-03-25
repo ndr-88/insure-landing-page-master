@@ -1,16 +1,18 @@
 $breakpoints: (
-  'large':  1440px
+  'medium': 660px,
+  'large':  1280px
 ) !default;
 
 @mixin min-width($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: map-has-key($breakpoints, $breakpoint)) {
-            @content;
-        }
+      // Get a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
     }
-
+    
     @else {
-        @warn "No value is found from `#{$breakpoint}`. "
-        +"the available breakpoints are: #{map-keys($breakpoints)}.";
+      @warn "No value is found from `#{$breakpoint}`. "
+          + "the available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }

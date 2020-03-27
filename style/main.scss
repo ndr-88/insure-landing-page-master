@@ -101,6 +101,12 @@ header {
                 color: $veryLightGray;
                 margin-bottom: 41px;
                 font-size: 20px;
+
+                @include min-width("large") {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+                
             }
 
             button {
@@ -128,21 +134,43 @@ header {
             padding: 22px 0 0 48px;
             text-transform: uppercase;
             font-family: $copy;
+            font-size: 14px;
+            letter-spacing: 1px;
+          
 
             a {
                 text-decoration: none;
                 color: $darkGrayishViolet;
-                margin-right: 22px;
+                margin-right: 21px;
+                font-weight: 700;
+
+                &:active {
+                    color: $darkViolet;
+                }
+            }
+
+            button {
+                &:active {
+                    background-color: $darkViolet;
+                    a{
+                        color: $veryLightGray;
+                    }
+                }
             }
 
             .viewPlansBtn {
-                padding: 10px 29px;
+                padding: 10px 28px;
                 border: 1px solid $darkGrayishViolet;
                 background-color: white;
                 font-weight: 400;
                 margin-left: 7px;
                 a {
                     margin-right: 0;
+                }
+
+                @include min-width("large"){
+                    font-size: 13px;
+                    letter-spacing: 1.5px;
                 }
             }
         }
@@ -163,15 +191,24 @@ h3 {
     font-family: $heading;
     font-size: 28px;
     letter-spacing: -1px;
-    margin: 35px 0 5px;
+    margin: 32px 0 4px;
+
+    @include min-width("large") {
+        margin: 35px 0 20px;
+    }
 }
 
 p {
     font-family: $copy;
     color: $veryLightGray;
-    padding: 0 24px;
-    line-height: 25px;
+    padding: 0 26px;
+    line-height: 26px;
     margin-bottom: 24px;
+
+    @include min-width("large") {
+        padding: 0 24px;
+        line-height: 25px;
+    }
 }
 
 button {
@@ -183,6 +220,11 @@ button {
     font-weight: 700;
     cursor: pointer;
     color: $veryLightGray;
+
+    &:active {
+        background-color: $veryLightGray;
+        color: $darkViolet;
+    }
 }
 
 .ctaContainer { 
@@ -193,6 +235,10 @@ button {
     min-height: 952px;
     background-color: $darkViolet;
     position: relative;
+
+    @include min-width("large") {
+        min-height: 600px;
+    }
 
     .copyContainer {
         flex-grow: 1;
@@ -228,7 +274,7 @@ button {
             .articleContainer {
                 width: 50%;
                 box-sizing: border-box;
-                padding: 173px 16px 0 167px;
+                padding: 173px 16px 0 166px;
                 text-align: left;
                 h1 {
                     font-size: 70px;
@@ -251,8 +297,8 @@ button {
         width: 44%;
 
         @include min-width('large') {
-            width: 13%;
-            top: 425px;
+            width: 13.5%;
+            top: 431px;
         }
     }
 
@@ -299,7 +345,7 @@ button {
         flex-wrap: wrap;
         text-align: left;
         padding: 0 133px 0 165px;
-        margin-bottom: 100px;
+        margin: 351px 0 101px 0;
 
         h1 {
             flex: 0 0 100%;
@@ -318,7 +364,13 @@ button {
         border-top: 1px solid $grayishBlue;
 
         @include min-width('large') {
-            display: none;
+            display: block;
+            width: 151px;
+            position: absolute;
+            left: 165px;
+            top: -185px;
+            height: 5px;
+            border-top: 1px solid $grayishBlue;
         }
     }
     h1 {
@@ -326,7 +378,11 @@ button {
     }
     p {
         color: $darkGrayishViolet;
-        margin-bottom: 59px;
+        margin-bottom: 14px;
+
+        @include min-width("large") {
+            margin-bottom: 59px;
+        }
     }
     .logoPresentation {
         width: 22.7%;
@@ -348,10 +404,15 @@ button {
 
             img {
                 margin: 0;
-                width: 22%;
+                width: 22.6%;
             }
             p {
                 padding: 0;
+                margin-top: 18px;
+
+                @include min-width("large") {
+                    margin-top: inherit;
+                }
             }
         }
     }
@@ -362,21 +423,22 @@ button {
     flex-direction: column;
     text-align: center;
     background-color: $darkViolet;
-    margin: 0 23px 141px;
+    margin: 127px 23px 140px;
     position: relative;
     z-index: 1;
+    min-height: 344px;
 
   
 
     h1 {
         font-size: 40px;
         line-height: 43px;
-        padding: 40px 0 10px;
+        padding: 42px 0 10px;
     }
 
     button {
         padding: 10px 24px;
-        margin: 0 auto 73px;
+        margin: 0 auto;
     }
 
     .rightBgImg {
@@ -387,7 +449,7 @@ button {
     }
 
     @include min-width('large') {
-        margin: 0 166px 152px;
+        margin: 0 165px 150px;
         min-height: 250px;
         flex-direction: row;
         align-items: center;
@@ -395,7 +457,7 @@ button {
         h1 {
             font-size: 54px;
             font-weight: 400;
-            padding: 23px 0 17px 85px;
+            padding: 17px 0 17px 80px;
             text-align: left;
             line-height: 54px;
             letter-spacing: 0.3px;
@@ -403,13 +465,25 @@ button {
         }
         button {
             padding: 10px 22px;
-            margin: 0 0 0 301px;
+            margin: 0;
             background: transparent;
             z-index: 3;
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:active {
+                background: $veryLightGray;
+                a{
+                    color: $darkViolet;
+                }
+            }
         }
 
         .rightBgImg {
             width: 39%;
+            height: 100%;
         }
     }
 }
@@ -427,11 +501,13 @@ footer {
     }
 
     .footerHeader {
+        z-index: 3;
+
         @include min-width("large") {
             display: flex;
             flex-direction: row;
             position: relative;
-            z-index: 2;
+            
         }
     }
 
@@ -451,10 +527,14 @@ footer {
         flex-direction: row;
         justify-content: center;
         .socialLink {
-            position: relative;
+            position: relative; 
+           
         }
         .socialImg {
             margin: 0 8px;
+            &:active {
+                filter: invert(12%) sepia(19%) saturate(3039%) hue-rotate(1000deg) brightness(3%) contrast(85%);
+            }
         }
 
         @include min-width("large") {
@@ -465,7 +545,7 @@ footer {
     }
     .lineFooter {
         width: 87%;
-        margin: 36px auto 11px;
+        margin: 38px auto 5px;
         height: 5px;
         border-top: 1px solid $grayishBlue;
 
@@ -481,6 +561,7 @@ footer {
     h4 {
         text-transform: uppercase;
         font-family: $copy;
+        font-size: 14px;
         font-weight: 400;
         color: $darkGrayishViolet;
     }
@@ -490,24 +571,54 @@ footer {
             display: flex;
             flex-direction: row;
             margin: 49px 0 0 164px;
+            z-index: 3;
+            position: relative;
         }
     }
     ul{
         padding: 0;
-        margin: 11px 0;
         line-height: 30px; 
+        margin: 17px 0 27px;
+        
 
         @include min-width("large") {
             margin: 0 174px 0 0;
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            line-height: 31px;
 
-            &:nth-child(3) {
-                margin: 0 213px 0 0;
+            &.contact {
+                margin-right: 210px;
+            }
+
+            &.helpMe {
+                margin-right: 166px;
             }
         }
         li {
             list-style: none;
             text-transform: uppercase;
             font-family: $copy;
+            &:not(:first-of-type) {
+                cursor: pointer;
+                font-size: 14px;
+                letter-spacing: 1.4px;
+            }
+            
+
+            &:active {
+                text-decoration: underline;
+            }
+
+            &:first-of-type:active {
+                cursor: default;
+                text-decoration: none;
+            }
+
+            &>h4 {
+                margin-bottom: 22px;
+                letter-spacing: 1.4px;
+            }
         }
     }
     .footerBgImg {

@@ -72,6 +72,10 @@ header {
         color: #fafafa;
         margin-bottom: 41px;
         font-size: 20px; }
+        @media (min-width: 1280px) {
+          header nav.visible a {
+            font-size: 14px;
+            letter-spacing: 1px; } }
       header nav.visible button {
         padding: 15px;
         margin: -7px 24px;
@@ -91,19 +95,32 @@ header {
         flex: 1;
         padding: 22px 0 0 48px;
         text-transform: uppercase;
-        font-family: "Karla", sans-serif; }
+        font-family: "Karla", sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px; }
         header nav a {
           text-decoration: none;
           color: #837d87;
-          margin-right: 22px; }
+          margin-right: 21px;
+          font-weight: 700; }
+          header nav a:active {
+            color: #2d2640; }
+        header nav button:active {
+          background-color: #2d2640; }
+          header nav button:active a {
+            color: #fafafa; }
         header nav .viewPlansBtn {
-          padding: 10px 29px;
+          padding: 10px 28px;
           border: 1px solid #837d87;
           background-color: white;
           font-weight: 400;
           margin-left: 7px; }
           header nav .viewPlansBtn a {
             margin-right: 0; } }
+    @media (min-width: 1280px) and (min-width: 1280px) {
+      header nav .viewPlansBtn {
+        font-size: 13px;
+        letter-spacing: 1.5px; } }
 
 h1 {
   position: relative;
@@ -117,14 +134,21 @@ h3 {
   font-family: "DM Serif Display", serif;
   font-size: 28px;
   letter-spacing: -1px;
-  margin: 35px 0 5px; }
+  margin: 32px 0 4px; }
+  @media (min-width: 1280px) {
+    h3 {
+      margin: 35px 0 20px; } }
 
 p {
   font-family: "Karla", sans-serif;
   color: #fafafa;
-  padding: 0 24px;
-  line-height: 25px;
+  padding: 0 26px;
+  line-height: 26px;
   margin-bottom: 24px; }
+  @media (min-width: 1280px) {
+    p {
+      padding: 0 24px;
+      line-height: 25px; } }
 
 button {
   text-decoration: none;
@@ -135,6 +159,9 @@ button {
   font-weight: 700;
   cursor: pointer;
   color: #fafafa; }
+  button:active {
+    background-color: #fafafa;
+    color: #2d2640; }
 
 .ctaContainer {
   display: flex;
@@ -143,6 +170,9 @@ button {
   min-height: 952px;
   background-color: #2d2640;
   position: relative; }
+  @media (min-width: 1280px) {
+    .ctaContainer {
+      min-height: 600px; } }
   .ctaContainer .copyContainer {
     flex-grow: 1;
     position: relative; }
@@ -170,7 +200,7 @@ button {
       .ctaContainer .copyContainer .articleContainer {
         width: 50%;
         box-sizing: border-box;
-        padding: 173px 16px 0 167px;
+        padding: 173px 16px 0 166px;
         text-align: left; }
         .ctaContainer .copyContainer .articleContainer h1 {
           font-size: 70px;
@@ -186,8 +216,8 @@ button {
     width: 44%; }
     @media (min-width: 1280px) {
       .ctaContainer .leftBgImg {
-        width: 13%;
-        top: 425px; } }
+        width: 13.5%;
+        top: 431px; } }
   .ctaContainer .rightBgImg {
     position: absolute;
     bottom: -181px;
@@ -224,7 +254,7 @@ button {
       flex-wrap: wrap;
       text-align: left;
       padding: 0 133px 0 165px;
-      margin-bottom: 100px; }
+      margin: 351px 0 101px 0; }
       .presentationContainer h1 {
         flex: 0 0 100%;
         margin: 9px 0 88px 0;
@@ -238,12 +268,21 @@ button {
     border-top: 1px solid #95a9c6; }
     @media (min-width: 1280px) {
       .presentationContainer .line {
-        display: none; } }
+        display: block;
+        width: 151px;
+        position: absolute;
+        left: 165px;
+        top: -185px;
+        height: 5px;
+        border-top: 1px solid #95a9c6; } }
   .presentationContainer h1 {
     color: #2b272f; }
   .presentationContainer p {
     color: #837d87;
-    margin-bottom: 59px; }
+    margin-bottom: 14px; }
+    @media (min-width: 1280px) {
+      .presentationContainer p {
+        margin-bottom: 59px; } }
   .presentationContainer .logoPresentation {
     width: 22.7%;
     height: auto;
@@ -260,25 +299,30 @@ button {
       flex: 1; }
       .presentationContainer .presentationArticle img {
         margin: 0;
-        width: 22%; }
+        width: 22.6%; }
       .presentationContainer .presentationArticle p {
-        padding: 0; } }
+        padding: 0;
+        margin-top: 18px; } }
+    @media (min-width: 1280px) and (min-width: 1280px) {
+      .presentationContainer .presentationArticle p {
+        margin-top: inherit; } }
 
 .howWeWorkContainer {
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: #2d2640;
-  margin: 0 23px 141px;
+  margin: 127px 23px 140px;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  min-height: 344px; }
   .howWeWorkContainer h1 {
     font-size: 40px;
     line-height: 43px;
-    padding: 40px 0 10px; }
+    padding: 42px 0 10px; }
   .howWeWorkContainer button {
     padding: 10px 24px;
-    margin: 0 auto 73px; }
+    margin: 0 auto; }
   .howWeWorkContainer .rightBgImg {
     position: absolute;
     top: 0;
@@ -286,25 +330,34 @@ button {
     width: 54%; }
   @media (min-width: 1280px) {
     .howWeWorkContainer {
-      margin: 0 166px 152px;
+      margin: 0 165px 150px;
       min-height: 250px;
       flex-direction: row;
       align-items: center; }
       .howWeWorkContainer h1 {
         font-size: 54px;
         font-weight: 400;
-        padding: 23px 0 17px 85px;
+        padding: 17px 0 17px 80px;
         text-align: left;
         line-height: 54px;
         letter-spacing: 0.3px;
         flex-basis: 44%; }
       .howWeWorkContainer button {
         padding: 10px 22px;
-        margin: 0 0 0 301px;
+        margin: 0;
         background: transparent;
-        z-index: 3; }
+        z-index: 3;
+        position: absolute;
+        right: 80px;
+        top: 50%;
+        transform: translateY(-50%); }
+        .howWeWorkContainer button:active {
+          background: #fafafa; }
+          .howWeWorkContainer button:active a {
+            color: #2d2640; }
       .howWeWorkContainer .rightBgImg {
-        width: 39%; } }
+        width: 39%;
+        height: 100%; } }
 
 footer {
   background-color: #fafafa;
@@ -316,12 +369,13 @@ footer {
     footer {
       display: block;
       text-align: left; } }
-  @media (min-width: 1280px) {
-    footer .footerHeader {
-      display: flex;
-      flex-direction: row;
-      position: relative;
-      z-index: 2; } }
+  footer .footerHeader {
+    z-index: 3; }
+    @media (min-width: 1280px) {
+      footer .footerHeader {
+        display: flex;
+        flex-direction: row;
+        position: relative; } }
   footer .logoContainer {
     margin: 87px 0 28px; }
     @media (min-width: 1280px) {
@@ -338,6 +392,8 @@ footer {
       position: relative; }
     footer .socialContainer .socialImg {
       margin: 0 8px; }
+      footer .socialContainer .socialImg:active {
+        filter: invert(12%) sepia(19%) saturate(3039%) hue-rotate(1000deg) brightness(3%) contrast(85%); }
     @media (min-width: 1280px) {
       footer .socialContainer {
         flex-basis: 50%;
@@ -345,7 +401,7 @@ footer {
         padding: 65px 0 0 246px; } }
   footer .lineFooter {
     width: 87%;
-    margin: 36px auto 11px;
+    margin: 38px auto 5px;
     height: 5px;
     border-top: 1px solid #95a9c6; }
     @media (min-width: 1280px) {
@@ -359,26 +415,46 @@ footer {
   footer h4 {
     text-transform: uppercase;
     font-family: "Karla", sans-serif;
+    font-size: 14px;
     font-weight: 400;
     color: #837d87; }
   @media (min-width: 1280px) {
     footer nav {
       display: flex;
       flex-direction: row;
-      margin: 49px 0 0 164px; } }
+      margin: 49px 0 0 164px;
+      z-index: 3;
+      position: relative; } }
   footer ul {
     padding: 0;
-    margin: 11px 0;
-    line-height: 30px; }
+    line-height: 30px;
+    margin: 17px 0 27px; }
     @media (min-width: 1280px) {
       footer ul {
-        margin: 0 174px 0 0; }
-        footer ul:nth-child(3) {
-          margin: 0 213px 0 0; } }
+        margin: 0 174px 0 0;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        line-height: 31px; }
+        footer ul.contact {
+          margin-right: 210px; }
+        footer ul.helpMe {
+          margin-right: 166px; } }
     footer ul li {
       list-style: none;
       text-transform: uppercase;
       font-family: "Karla", sans-serif; }
+      footer ul li:not(:first-of-type) {
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 1.4px; }
+      footer ul li:active {
+        text-decoration: underline; }
+      footer ul li:first-of-type:active {
+        cursor: default;
+        text-decoration: none; }
+      footer ul li > h4 {
+        margin-bottom: 22px;
+        letter-spacing: 1.4px; }
   footer .footerBgImg {
     position: absolute;
     top: 0;

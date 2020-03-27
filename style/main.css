@@ -83,8 +83,8 @@ header {
         background: #2b272f;
         border: 1px solid #fafafa; }
       header nav.visible .navBgImg {
-        position: absolute;
-        bottom: 129px;
+        position: fixed;
+        bottom: 0;
         left: 0;
         width: 100%; }
       @media (min-width: 1280px) {

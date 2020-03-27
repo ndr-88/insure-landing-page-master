@@ -201,11 +201,11 @@ button {
       .ctaContainer .copyContainer .articleContainer {
         width: 50%;
         box-sizing: border-box;
-        padding: 173px 30px 0 166px;
+        padding: 173px 16px 0 166px;
         text-align: left; }
         .ctaContainer .copyContainer .articleContainer h1 {
           font-size: 70px;
-          padding: 0 10px 17px 0;
+          padding: 0 30px 17px 0;
           line-height: 60px; }
         .ctaContainer .copyContainer .articleContainer p {
           padding: 0; } }
